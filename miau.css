@@ -1,0 +1,182 @@
+*{
+    font-family: 'Dongle', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+/*FX overflow hidden remembrer*/
+.hidden{
+    overflow: ;
+}
+.centrar{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #000000;
+    border-color: #000000 transparent #000000 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+/*nav*/
+.nav{
+    
+}
+nav{
+    background-color: #f5f5f5;
+    height: 100%;
+    width: 100%;
+    positio
+    box-shadow: rgba #000000 alpha 1.5
+}
+#logo{
+    height: 40px;
+}
+/*contenido*/
+.container{
+    position: relative;
+    width: 1200vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+.container .card{
+    width: 100%;
+    background-color: #fafafa;
+}
+.container .card .imgBx{
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+}
+.container .card .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+    transform-origin: right;
+}
+.container .card:hover .imgBx img{
+    transform: scale(1.5);
+}
+.action{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.action li{
+    position: relative;
+    list-style: none;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    cursor: pointer;
+    transform: translateX(60px);
+    transition: transform 0.5s;
+}
+.action li:nth-child(2){
+    transition-delay: 0.15s;
+}
+.action li:nth-child(3){
+    transition-delay: 0.2s;
+}
+.container .card:hover .action li{
+    transform: translateX(0px);
+}
+.action li:hover{
+    background-color: #ff2020;
+    color: #fff;
+}
+.action li span{
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%) translateX(-20px);
+    white-space: nowrap;
+    padding: 4px 60px;
+    background: #fff;
+    color: #333;
+    font-weight: 600;
+    font-size: 12px;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.7s;
+}
+.action li:hover span{
+    opacity: 1;
+    transform: translateY(-50%) translateX(0px);
+}
+.action li span::before{
+    content: '';
+    position: absolute;
+    top:50%;
+    right:-4px;
+    width: 8px;
+    height: 8px;
+    background: rgb(255, 255, 255);
+    transform: translateY(-50%) rotate(45deg);
+}
+.container .card .content{
+    padding: 10px;
+}
+.container .card .content .productname h3{
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+    margin: 5px 0;
+}
+.container .card .content .price_raiting{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .card .content .price_raiting h2{
+    font-size: 20px;
+    color: red;
+    font-weight: 600;
+}
+.container .card .content .price_raiting .fa-solid{
+    color: #ffd513;
+    cursor:pointer;
+}
+.container .card .content .price_raiting .fa-solid.grey{
+    color: #ccc;
+}
